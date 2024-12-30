@@ -9,7 +9,7 @@ scriptings:
 - http_response:
     name: Spotify_Lyrics_Translation
     match: ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/
-    script_url: https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js
+    script_url: https://raw.githubusercontent.com/MaiHongPhong1902/Spotifypre/refs/heads/main/spotify.js
     body_required: true
     arguments:
       appid: InsertYourAPPIDHere
