@@ -1,1 +1,17 @@
+mitm:
+  enabled: true
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+  - spclient.wg.spotify.com
 
+scriptings:
+- http_response:
+    name: Spotify_Lyrics_Translation
+    match: ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/
+    script_url: https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js
+    body_required: true
+    arguments:
+      appid: InsertYourAPPIDHere
+      securityKey: InsertYourSecurityKeyHere
+    update_interval: 5
